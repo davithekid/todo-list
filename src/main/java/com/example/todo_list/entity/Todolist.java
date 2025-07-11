@@ -6,17 +6,14 @@ import lombok.EqualsAndHashCode;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 
-@Table(name = "todo")
-@Entity(name = "todo")
+// basicamente meu entity serve para eu mexer nas minhas tabelas do database
+// nele vou definir meus getters and setters
 
-// lombock para nao precisar de getters e setters
-@Getter
-@NoArgsConstructor
-@AllArgsConstructor
-@EqualsAndHashCode(of = "id")
+@Table(name = "todo") // tabela banco de dados
+@Entity(name = "todo")
 public class Todolist {
 
-    @Id @GeneratedValue (strategy = GenerationType.IDENTITY)
+    @Id @GeneratedValue (strategy = GenerationType.IDENTITY) // aplicando config pro meu tipo de ID
     private Long id;
 
     private String nome;
@@ -27,6 +24,7 @@ public class Todolist {
 
     private int prioridade;
 
+    // getters and setters
     public Long getId() {
         return id;
     }
