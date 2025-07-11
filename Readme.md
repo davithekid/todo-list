@@ -74,7 +74,15 @@ Estou começando a criar um **padrão pessoal** de como estruturar minhas APIs.
 
 ---
 
-## 🚧 Em construção...
+# Post método
+## Primeiro passo: controller
+- Criar um método que recebe o reqbody, o DTO de post e o data.
+
+## Segundo passo: Criar o DTO Request
+
+## Terceiro passo: Criar construtor de post na Entidade
+- Criar um construtor que os datas.
+
 
 O projeto está em andamento e estou aplicando **conceitos práticos de orientação a objetos**, estrutura MVC e boas práticas com Spring Boot!
 
