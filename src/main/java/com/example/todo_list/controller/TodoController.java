@@ -1,11 +1,11 @@
 package com.example.todo_list.controller;
 
+import com.example.todo_list.entity.Todolist;
+import com.example.todo_list.entity.TodolistRequestDTO;
 import com.example.todo_list.entity.TodolistResponseDTO;
 import com.example.todo_list.repository.TodoRepository;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 
 import java.util.List;
@@ -33,5 +33,16 @@ public class TodoController {
         return todolist;
     }
 
+    // post
+    @PostMapping
+
+    // preciso passar como parametros (o reqbody,meu DTO de post e o data)
+    public void saveTodolist(@RequestBody TodolistRequestDTO data) {
+        // minha classe esta recebendo o novo objeto enviado viapost
+
+        Todolist todolistData = new Todolist(data);
+        repository.save(todolistData);
+        return;
+    }
 
 }
