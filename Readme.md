@@ -4,4 +4,11 @@
 - navegar até meu projeto
 - git init (para inicializar)
 - git add . (para adicionar os arquivos para a chamada a ser commitado)
+- git status (para eu ver o status dos meus commits)
+- git commit -m "" (mensagem do commit)
+- git branch -M "main" (mudar o nome da minha branch)
+- git remote add origin https://github.com/davithekid/todo-list.git (estou enviando para este local)
+- git push -u origin main
+
+- git checkout -b "nova branch" (criando um novo perfil de branch)
 - 
