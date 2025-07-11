@@ -1,8 +1,9 @@
 package com.example.todo_list.controller;
 
+
+import com.example.todo_list.dto.TodolistRequestDTO;
+import com.example.todo_list.dto.TodolistResponseDTO;
 import com.example.todo_list.entity.Todolist;
-import com.example.todo_list.entity.TodolistRequestDTO;
-import com.example.todo_list.entity.TodolistResponseDTO;
 import com.example.todo_list.repository.TodoRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
