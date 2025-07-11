@@ -13,7 +13,8 @@ import lombok.NoArgsConstructor;
 @Entity(name = "todo")
 public class Todolist {
 
-    @Id @GeneratedValue (strategy = GenerationType.IDENTITY) // aplicando config pro meu tipo de ID
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY) // aplicando config pro meu tipo de ID
     private Long id;
 
     private String nome;
@@ -23,6 +24,18 @@ public class Todolist {
     private boolean realizado;
 
     private int prioridade;
+
+    // construtor padrao para usar JPA
+    public Todolist() {
+    }
+
+    // construtor padrão para o POST
+    public Todolist(TodolistRequestDTO data) {
+        this.nome = data.nome();
+        this.prioridade = data.prioridade();
+        this.descricao = data.descricao();
+        this.realizado = data.realizado();
+    }
 
     // getters and setters
     public Long getId() {
@@ -64,4 +77,7 @@ public class Todolist {
     public void setPrioridade(int prioridade) {
         this.prioridade = prioridade;
     }
+
+    // aqui estou criando um construtur pra minha REQUEST
+
 }
