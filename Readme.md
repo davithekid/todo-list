@@ -11,4 +11,13 @@
 - git push -u origin main
 
 - git checkout -b "nova branch" (criando um novo perfil de branch)
-- 
+
+
+## começar a construção do projeto
+# separei em pastas: controller, entity, repository, service
+
+- controller:
+- ~~ nela estou fazendo meu processo CRUD
+
+## repository - manipula a interface 
+## entity - uma tabela do banco de dados

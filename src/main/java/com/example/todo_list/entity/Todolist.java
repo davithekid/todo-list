@@ -1,22 +1,32 @@
 package com.example.todo_list.entity;
 
 import jakarta.persistence.*;
+import lombok.AllArgsConstructor;
+import lombok.EqualsAndHashCode;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
 
-@Entity
-@Table(name = "todos") // informando o nome da tabela, sempre no plural
-public class Todo {
+@Table(name = "todo")
+@Entity(name = "todo")
 
-    // aqui estou mexendo na criação do meu id
-    // adotando uma estrategia que ele é um ID de tipo codificado (UUID)
-    @Id
-    @GeneratedValue(strategy = GenerationType.UUID)
+// lombock para nao precisar de getters e setters
+@Getter
+@NoArgsConstructor
+@AllArgsConstructor
+@EqualsAndHashCode(of = "id")
+public class Todolist {
+
+    @Id @GeneratedValue (strategy = GenerationType.IDENTITY)
     private Long id;
+
     private String nome;
+
     private String descricao;
+
     private boolean realizado;
+
     private int prioridade;
 
-    // logo abaixo criando meus getters e setters
     public Long getId() {
         return id;
     }
