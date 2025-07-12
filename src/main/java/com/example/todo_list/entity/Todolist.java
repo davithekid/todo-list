@@ -1,6 +1,7 @@
 package com.example.todo_list.entity;
 
-import com.example.todo_list.dto.TodolistRequestDTO;
+
+import com.example.todo_list.DTO.TodolistRequestDTO;
 import jakarta.persistence.*;
 
 @Table(name = "todo")
@@ -14,7 +15,10 @@ public class Todolist {
     private String nome;
     private String descricao;
     private boolean realizado;
-    private int prioridade;
+
+
+    private Integer prioridade;
+
 
     public Todolist() {
     }
@@ -64,7 +68,7 @@ public class Todolist {
         return prioridade;
     }
 
-    public void setPrioridade(int prioridade) {
+    public void setPrioridade(Integer prioridade) {
         this.prioridade = prioridade;
     }
 }
