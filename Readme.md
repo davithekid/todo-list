@@ -36,6 +36,7 @@ Estou começando a criar um **padrão pessoal** de como estruturar minhas APIs.
 
 - `controller/`
 - `entity/`
+- `dto/`
 - `repository/`
 - `service/`
 

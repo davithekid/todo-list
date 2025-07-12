@@ -1,40 +1,37 @@
 package com.example.todo_list.entity;
 
+
 import com.example.todo_list.DTO.TodolistRequestDTO;
 import jakarta.persistence.*;
 
-// basicamente meu entity serve para eu mexer nas minhas tabelas do database
-// nele vou definir meus getters and setters
-
-@Table(name = "todo") // tabela banco de dados
+@Table(name = "todo")
 @Entity(name = "todo")
 public class Todolist {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY) // aplicando config pro meu tipo de ID
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
     private String nome;
-
     private String descricao;
-
     private boolean realizado;
+
 
     private Integer prioridade;
 
-    // construtor padrao para usar JPA
+
     public Todolist() {
     }
 
-    // construtor padrão para o POST
     public Todolist(TodolistRequestDTO data) {
         this.nome = data.nome();
-        this.prioridade = data.prioridade();
         this.descricao = data.descricao();
         this.realizado = data.realizado();
+        this.prioridade = data.prioridade();
     }
 
-    // getters and setters
+    // Getters e Setters...
+
     public Long getId() {
         return id;
     }
@@ -74,7 +71,4 @@ public class Todolist {
     public void setPrioridade(Integer prioridade) {
         this.prioridade = prioridade;
     }
-
-    // aqui estou criando um construtur pra minha REQUEST
-
 }
