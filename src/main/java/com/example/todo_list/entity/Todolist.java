@@ -1,10 +1,7 @@
 package com.example.todo_list.entity;
 
+import com.example.todo_list.DTO.TodolistRequestDTO;
 import jakarta.persistence.*;
-import lombok.AllArgsConstructor;
-import lombok.EqualsAndHashCode;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
 
 // basicamente meu entity serve para eu mexer nas minhas tabelas do database
 // nele vou definir meus getters and setters
@@ -23,7 +20,7 @@ public class Todolist {
 
     private boolean realizado;
 
-    private int prioridade;
+    private Integer prioridade;
 
     // construtor padrao para usar JPA
     public Todolist() {
@@ -74,7 +71,7 @@ public class Todolist {
         return prioridade;
     }
 
-    public void setPrioridade(int prioridade) {
+    public void setPrioridade(Integer prioridade) {
         this.prioridade = prioridade;
     }
 
